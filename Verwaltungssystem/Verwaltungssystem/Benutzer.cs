@@ -42,5 +42,13 @@ public class Benutzer
             Console.WriteLine(projekt.Name);
         }
     }
+
+    public Information InformationErstellen() //projekt ID mitgeben
+    {
+        Information neueInfo = new Information(); //(projektID oder Name)
+        return  neueInfo ;
+    }
+    
+    
     
 }
