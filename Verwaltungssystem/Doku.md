@@ -1,10 +1,11 @@
 
 ## Interpretation der Aufgabenstellung:
+**Aufgabenstellung**  
 
-**Verwatlungssystem**
-Ich übersezte die Aufgabenstellung in ein Salome-Diagram.
+**Verwaltungssystem**
+Als erstes übersetze ich die Aufgabenstellung in ein Salome-Diagram.
 Dies erlaubt mir, den Inhalt ohne formelle Vorschriften in eine grafische Umsetztung zu bringen. Dies erleichtert es mir den Sachverhalt zu verstehen und einen ersten Überblick zu erhalten. Wichitg ist mir dabei alle relevanten Informationen aus dem Text zu übernehmen, sodass nichts vergessen geht.
-Daraus entwickle ich in der Alalyse die weiteren diagramme nach dem *Roten Faden*.
+Daraus entwickle ich in der Alalyse die weiteren Diagramme nach dem *Roten Faden*.
 
 ## Zielsetzung
 
