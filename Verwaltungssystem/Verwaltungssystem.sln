@@ -4,11 +4,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Verwaltungssystem", "Verwal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsVerwaltungssystem", "TestsVerwaltungssystem\TestsVerwaltungssystem.csproj", "{CB7A33DA-04FA-44E1-B70D-5F5993F87A59}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doku", "Doku", "{265F2529-7B13-42A7-8DC4-82615AB5EB12}"
-	ProjectSection(SolutionItems) = preProject
-		Doku.md = Doku.md
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
