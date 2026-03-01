@@ -1,0 +1,50 @@
+classDiagram
+
+class Projekt {
+    int projektId
+    String name
+    String kunde
+    String kernanforderungen
+    Benutzer projektleiter
+}
+
+class Benutzer {
+    int benutzerId
+    String name
+    Rolle rolle
+}
+
+class Information {
+    int infoId
+    Informationstyp typ
+    String inhalt
+    Date erstelltAm
+}
+
+class Kommentar {
+    int kommentarId
+    String text
+    boolean istErgaenzung
+    Date erstelltAm
+}
+
+class Tag {
+    <<enumeration>>
+    Analyse
+    Design
+    Anforderung
+}
+
+class Rolle {
+    <<enumeration>>
+    Projektleiter
+    Mitarbeiter
+}
+
+
+Projekt "1" --> "0..*" Information : enthält
+Benutzer "1" --> "0..*" Projekt : erstellt
+Benutzer "1" --> "0..*" Information : schreibt
+Information "1" --> "0..*" Kommentar : hat
+Benutzer "1" --> "0..*" Kommentar : schreibt
+Information "0..3" --> "0..*" Tag : hat
