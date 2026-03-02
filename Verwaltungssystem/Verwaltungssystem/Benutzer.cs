@@ -2,7 +2,7 @@ namespace Verwaltungssystem;
 
 public class Benutzer
 {
-    private int id;
+    public int id;
     private string name;
     private Rolle rolle;
     public List<Projekt> Projekte { get; set; } = new List<Projekt>();

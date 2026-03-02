@@ -8,4 +8,8 @@ public class Projekt
     public Benutzer Projektleiter;
     private string Kernanforderungen;
     public List<Kommentar> Kommentare { get; set; } = new List<Kommentar>();
+
+   
 }
+
+
