@@ -2,6 +2,7 @@ namespace Verwaltungssystem;
 
 public enum Tag
 {
-    Analyse
-   
+    Gelb,
+    Rosa,
+    Grün
 }

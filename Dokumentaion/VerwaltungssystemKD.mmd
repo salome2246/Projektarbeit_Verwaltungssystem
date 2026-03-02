@@ -1,38 +1,34 @@
 classDiagram
-
+%% Klassen
 class Projekt {
-    int projektId
-    String name
-    String kunde
-    String kernanforderungen
-    Benutzer projektleiter
+    +int projektId
+    +String name
+    +String kunde
+    +Benutzer projektleiter
 }
 
 class Benutzer {
-    int benutzerId
-    String name
-    Rolle rolle
+    +int benutzerId
+    +String name
+    +Rolle rolle
 }
 
 class Information {
-    int infoId
-    Informationstyp typ
-    String inhalt
-    Date erstelltAm
+    +int infoId
+    +String inhalt
 }
 
 class Kommentar {
-    int kommentarId
-    String text
-    boolean istErgaenzung
-    Date erstelltAm
+    +int kommentarId
+    +String inhalt
 }
 
+%% Enumerationen als eigene Boxen
 class Tag {
     <<enumeration>>
-    Analyse
-    Design
-    Anforderung
+    Gelb
+    Rosa
+    Grün
 }
 
 class Rolle {
@@ -41,10 +37,15 @@ class Rolle {
     Mitarbeiter
 }
 
-
-Projekt "1" --> "0..*" Information : enthält
+%% Beziehungen mit Kardinalitäten
 Benutzer "1" --> "0..*" Projekt : erstellt
 Benutzer "1" --> "0..*" Information : schreibt
-Information "1" --> "0..*" Kommentar : hat
 Benutzer "1" --> "0..*" Kommentar : schreibt
-Information "0..3" --> "0..*" Tag : hat
+Projekt "1" --> "0..*" Information : enthält
+Information "1" --> "0..*" Kommentar : hat
+Information "1" --> "1..3*" Tag : hat
+Benutzer "1" --> "1" Rolle: ist
+
+%% Optional: Enums visuell gruppieren
+Tag <|-- Information
+Rolle <|-- Benutzer

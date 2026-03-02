@@ -2,53 +2,31 @@ namespace Verwaltungssystem;
 
 public class Benutzer
 {
-    public int id;
-    private string name;
-    private Rolle rolle;
-    public List<Projekt> Projekte { get; set; } = new List<Projekt>();
+    public int BenutzerId { get; set; }
+    public string Name { get; set; }
+    public Rolle Rolle { get; set; }
 
-    public Benutzer(int id, string name, Rolle rolle)
+    public Projekt ErstelleProjekt(string name, string kunde)
     {
-        this.id = id;
-        this.name = name;
-        this.rolle = rolle;
+        var projekt = new Projekt { Name = name, Kunde = kunde, Projektleiter = this };
+        return projekt;
     }
 
-    public Projekt ProjektErstellen(int projektId, string name)
+    public Information SchreibeInformation(Projekt projekt, string inhalt, List<Tag> tags)
     {
-        // Prüfung: darf der Benutzer ein Projekt erstellen?
-        if (rolle != Rolle.Projektleiter)
-        {
-            throw new InvalidOperationException(
-                "Nur Projektleiter dürfen Projekte erstellen.");
-        }
+        if(tags.Count < 1 || tags.Count > 3)
+            throw new ArgumentException("Eine Information muss 1 bis 3 Tags haben.");
 
-        Projekt neuesProjekt = new Projekt
-        {
-            Id = projektId,
-            Name = name,
-            Projektleiter = this,
-            
-        };
-        
-        Projekte.Add(neuesProjekt);
-        return neuesProjekt;
+        var info = new Information { Inhalt = inhalt, Tags = tags };
+        projekt.Informationen.Add(info);
+        return info;
     }
 
-    public void ProjekteAusgeben()
+    public Kommentar SchreibeKommentar(Information info, string inhalt)
     {
-        foreach (Projekt projekt in Projekte)
-        {
-            Console.WriteLine(projekt.Name);
-        }
+        var kommentar = new Kommentar { Inhalt = inhalt, Autor = this };
+        info.Kommentare.Add(kommentar);
+        return kommentar;
     }
-
-    public Information InformationErstellen() //projekt ID mitgeben
-    {
-        Information neueInfo = new Information(); //(projektID oder Name)
-        return  neueInfo ;
-    }
-    
-    
     
 }

@@ -2,6 +2,9 @@ namespace Verwaltungssystem;
 
 public class Kommentar
 {
-    private String text;
+    public int KommentarId { get; set; }
+    public string Inhalt { get; set; }
+    public Benutzer Autor { get; set; }
+
     
 }
