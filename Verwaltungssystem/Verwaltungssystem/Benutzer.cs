@@ -8,7 +8,18 @@ public class Benutzer
 
     public Projekt ErstelleProjekt(string name, string kunde, DatenContext context)
     {
-        var projekt = new Projekt { Name = name, Kunde = kunde, Projektleiter = this };
+        if (Rolle != Rolle.Projektleiter)
+        {
+            throw new InvalidOperationException("Nur Projektleiter dürfen Projekte erstellen.");
+        }
+
+        var projekt = new Projekt
+        {
+            Name = name,
+            Kunde = kunde,
+            Projektleiter = this
+        };
+
         context.Projekte.Add(projekt);
         return projekt;
     }
