@@ -8,5 +8,6 @@
     &lt;TestId&gt;NUnit3x::FBA70862-E6CD-4428-8C1F-5D9F0F32AFD3::net9.0::TestsVerwaltungssystem.Tests.Mitarbeiter_Darf_Kein_Projekt_Erstellen&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::FBA70862-E6CD-4428-8C1F-5D9F0F32AFD3::net9.0::TestsVerwaltungssystem.Tests.Projektleiter_Darf_Maximal_3_Tags_Setzen&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::FBA70862-E6CD-4428-8C1F-5D9F0F32AFD3::net9.0::TestsVerwaltungssystem.Tests.Benutzer_Kann_Information_Kommentieren&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::FBA70862-E6CD-4428-8C1F-5D9F0F32AFD3::net9.0::TestsVerwaltungssystem.Tests.Information_Darf_Nicht_Mehr_Als_3_Tags_Haben&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

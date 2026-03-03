@@ -71,16 +71,14 @@ public class Tests
     }
 
     [Test]
-    public void Projektleiter_Darf_Maximal_3_Tags_Setzen()
+    public void Information_Darf_Nicht_Mehr_Als_3_Tags_Haben()
     {
-        var tags = new List<Tag> { Tag.Gelb, Tag.Rosa,Tag.Grün };
+        var tags = new List<Tag> { Tag.Gelb, Tag.Rosa, Tag.Grün, Tag.Blau };
 
-        var startCount = projekt.Informationen.Count;
-
-        var info = projektleiter.SchreibeInformation(projekt, "Testinfo", tags);
-
-        Assert.That(projekt.Informationen.Count, Is.EqualTo(startCount + 1));
-        Assert.That(info.Tags.Count, Is.EqualTo(3));
+        Assert.That(
+            () => projektleiter.SchreibeInformation(projekt, "Zu viele Tags", tags),
+            Throws.TypeOf<ArgumentException>()
+        );
     }
     
     [Test]
