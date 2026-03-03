@@ -13,6 +13,9 @@ public class Tests
     [SetUp]
     public void Setup()
     {
+        DatenContext context;
+        context = new DatenContext();
+        
         benutzer = new Benutzer 
         { 
             BenutzerId = 1, 
@@ -20,7 +23,7 @@ public class Tests
             Rolle = Rolle.Projektleiter 
         };
 
-        projekt = benutzer.ErstelleProjekt("Testprojekt", "Kunde XY");
+        projekt = benutzer.ErstelleProjekt("Testprojekt", "Kunde XY",context);
     }
 
     [Test]

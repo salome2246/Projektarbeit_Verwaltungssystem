@@ -1,11 +1,23 @@
-﻿namespace Verwaltungssystem;
+﻿using System.Text.Json;
+
+namespace Verwaltungssystem;
 
 class Program
 {
     static void Main(string[] args)
     {
-        
-        DatenContext context = new DatenContext();
+        // 1️⃣ DatenContext laden oder neu erstellen
+        DatenContext context;
+
+        if (File.Exists("daten.json"))
+        {
+            string json = File.ReadAllText("daten.json");
+            context = JsonSerializer.Deserialize<DatenContext>(json) ?? new DatenContext();
+        }
+        else
+        {
+            context = new DatenContext();
+        }
         
         // 1️⃣ Benutzer erstellen
         Benutzer max = new Benutzer { BenutzerId = 1, Name = "Max", Rolle = Rolle.Projektleiter };
@@ -24,6 +36,13 @@ class Program
         // 4️⃣ Benutzer fügt der Information einen Kommentar hinzu
         Kommentar kommentar1 = max.SchreibeKommentar(info1, "Bitte Agenda vorbereiten");
         Console.WriteLine($"Kommentar von {kommentar1.Autor.Name}: '{kommentar1.Inhalt}'");
+        
+        var resultate = max.SucheNachTag(Tag.Gelb, context);
+
+        foreach (var info in resultate)
+        {
+            Console.WriteLine(info.Inhalt);
+        }
 
         // 5️⃣ Optional: Ausgabe aller Informationen und Kommentare des Projekts
         Console.WriteLine("\nProjektübersicht:");
@@ -35,5 +54,9 @@ class Program
                 Console.WriteLine($"  - Kommentar von {com.Autor.Name}: {com.Inhalt}");
             }
         }
+        
+        var options = new JsonSerializerOptions { WriteIndented = true };
+        File.WriteAllText("daten.json", JsonSerializer.Serialize(context, options));
     }
+    
 }

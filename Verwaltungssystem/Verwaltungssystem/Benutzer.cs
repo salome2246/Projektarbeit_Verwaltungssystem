@@ -30,4 +30,8 @@ public class Benutzer
         return kommentar;
     }
     
+    public List<Information> SucheNachTag(Tag tag, DatenContext context)
+    {
+        return context.SucheInformationenNachTag(tag);
+    }
 }
