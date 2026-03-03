@@ -5,22 +5,31 @@ class Projekt {
     +String name
     +String kunde
     +Benutzer projektleiter
+	+List Information
 }
 
 class Benutzer {
     +int benutzerId
     +String name
     +Rolle rolle
+	
+	ErstelleProjekt()
+	SchreibeInformation()
+	SchreibeKommentar()
+	
 }
 
 class Information {
     +int infoId
     +String inhalt
+	+List Tags
+	+List Kommentar
 }
 
 class Kommentar {
     +int kommentarId
     +String inhalt
+	+Benutzer author
 }
 
 %% Enumerationen als eigene Boxen

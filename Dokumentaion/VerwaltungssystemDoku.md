@@ -86,12 +86,15 @@ Sollte ich die anforderungen in **Unit tests** schreieben. ICh denke ja.
 X Benuter ID automatisch erstellen
 
 
+
 ## Anforderungen in Unittests
 
 Anforderunganalyse mti chatgpt erstellt. 
 **wichtigste anforderungen rauskristallisieren** und units tests schrieben!
 **Informationsyp?!**
 Anfoderungen in Primär und sekundär unterteilt um meinem Ziel so einfach wei möglich, dafür fertig treu zu bleiben.
+
+drei davon in units test festgehalten
 
 ##Prototyp
 
