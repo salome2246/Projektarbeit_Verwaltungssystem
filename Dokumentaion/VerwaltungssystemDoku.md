@@ -100,6 +100,16 @@ drei davon in units test festgehalten
 
 Sinhaftigkeit kann in Fragegestellt werden, aber auch nicht inmeiner Zielsetzung
 
+## Iteratives arbeiten
+
+Ich überarbetei die anforderungen ans programm nochmals
+
+
+## Datenbank
+entscheide mih für jason da schon mal gemacht.
+
+wieso tag eigene tabelle und rolle nciht. Many to many
+
 ## Fragen
 
 **Informationsyp?!**

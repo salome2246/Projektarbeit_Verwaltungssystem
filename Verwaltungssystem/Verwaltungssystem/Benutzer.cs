@@ -6,9 +6,10 @@ public class Benutzer
     public string Name { get; set; }
     public Rolle Rolle { get; set; }
 
-    public Projekt ErstelleProjekt(string name, string kunde)
+    public Projekt ErstelleProjekt(string name, string kunde, DatenContext context)
     {
         var projekt = new Projekt { Name = name, Kunde = kunde, Projektleiter = this };
+        context.Projekte.Add(projekt);
         return projekt;
     }
 

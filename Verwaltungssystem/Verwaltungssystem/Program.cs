@@ -4,12 +4,17 @@ class Program
 {
     static void Main(string[] args)
     {
+        
+        DatenContext context = new DatenContext();
+        
         // 1️⃣ Benutzer erstellen
         Benutzer max = new Benutzer { BenutzerId = 1, Name = "Max", Rolle = Rolle.Projektleiter };
-
+        context.Benutzer.Add(max);
+        
         // 2️⃣ Benutzer erstellt ein Projekt
-        Projekt projekt1 = max.ErstelleProjekt("Neues IT-Projekt", "Firma XY");
+        Projekt projekt1 = max.ErstelleProjekt("Neues IT-Projekt", "Firma XY",context);
         Console.WriteLine($"Projekt '{projekt1.Name}' wurde erstellt von {projekt1.Projektleiter.Name}.");
+        
 
         // 3️⃣ Benutzer fügt dem Projekt eine Information mit Tags hinzu
         List<Tag> tags = new List<Tag> { Tag.Gelb, Tag.Rosa };
