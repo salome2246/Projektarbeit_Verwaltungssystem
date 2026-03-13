@@ -9,7 +9,6 @@
 
     <ItemGroup>
       <Folder Include="Datenspeicher\" />
-      <Folder Include="Services\" />
     </ItemGroup>
 
 </Project>
