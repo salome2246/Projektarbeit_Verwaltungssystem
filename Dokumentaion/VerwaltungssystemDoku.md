@@ -36,7 +36,7 @@ Projektleiterin und Projektmitarbeiterin möchten die Informationen nach Tags du
 Die Firma Xarelto ist Auftraggeberin. Interne Stakeholder sind die Projektleiterin, die Projektmitarbeitenden und die IT-Beauftrage (ich).  
 Die Kunden von Xarelto sind nur indirekt betroffen und werden deswegen nicht als Stakeholder erwähnt.
 
-[SalomeDiagramm](https://example.com)
+[SalomeDiagramm](01_salomeDiagramm.png)
 
 ANPASSUNG UND SPEZIFIZERIUNG DES PROJEKTBESCHRIEBS
 
