@@ -1,175 +1,193 @@
+### DOKUMENTATON PROJEKT VERWALTUNGSSYSTEM
+#### im Fach Lösungsalgorithmen
+#### Herbstsemester 2025-2026
+#### Salome Gilgen
 
-## Interpretation der Aufgabenstellung:
+---
 
-**Aufgabenstellung**
-Wir sollen die Anforderungen eines kleinen Verwaltungssystems analysieren und in ein Klassendiagramm umsetzen. Dieses Klassendiagramm dient als Grundlage für die Implementierung einer Konsolenapplikation in C#.
 
-Das Projekt umfasst zudem das Testen der Anwendung.
-Dokumentation, Planung und Controlling sind wichtige Bestandteile der Arbeit.
+##### INHALTSVERZEICHNIS
+1. [AUFGABENSTELLUNG](#PROJEKTBESCHIREB)
+2. [PROJEKTBESCHIREB](#projektstruktur)
+4. [ZIELSETZUNG](#services)
+5. [ANALYSE](#services)
+6. [TESTS](#services)
+7. [DATENPERSISTENZ](#services)
+8. [IMPLEMENTIERUNG](#)
+8. [VORGEHEN](#services)
+9. [REFLEXION](#REFLEXION)
 
+
+##### AUFGABENSTELLUNG
+
+Wir sollen die Anforderungen eines kleinen Verwaltungssystems analysieren und in ein Klassendiagramm umsetzen.  
+Dieses Klassendiagramm dient als Grundlage für die Implementierung einer Konsolenapplikation in C#.  
+Das Projekt umfasst zudem das Testen der Anwendung. Auch sind Dokumentation, Planung und Controlling wichtige Bestandteile der Arbeit.  
 Zum Abschluss soll die Arbeit unter anderem mit der Demonstration eines Prototyps präsentiert werden.
 
-**Verständis des Verwaltungssystem**
-Ich übersetzte die Aufgabenstellung in ein Salome-Diagramm.
-Dies erlaubt mir, den Inhalt ohne formelle Vorschriften in eine grafische Umsetztung zu bringen. 
-Dies erleichtert es mir den Sachverhalt zu verstehen und einen ersten Überblick zu erhalten. 
-Wichitg ist mir dabei alle relevanten Informationen aus dem Text zu übernehmen, sodass nichts vergessen geht. Als Stakeholder halte ich die Firma Xarelto als Auftraggeber fest.
-(Interne Stakholder sind der Projektleiter die Projektmitarbeitenden
-und die IT Beauftrage (ich)). Die Kunden von Xarelto sind nur indirekt betroffen. deswegen werden sie explizit als nicht als Stakeholder erwähnt.
-Daraus entwickle ich in der Analyse die weiteren Diagramme nach dem *Roten Faden*.
+##### PROJEKTBESCHRIEB
 
-LINK SALOME-Diagramm
+Die Firma Xarelto möchte ein kleines Projekt-Verwaltungssystem einführen.  
+Die Projektleiterin soll Projekte erstellen können.  
+Projektleiterin und Projektmitarbeiterin sollen dem Projekt Informationen hinzufügen können. (Text, Bild oder andere Dokumente).  
+Die Informationen sollen jeweils mit Tags (nicht mehr als drei) versehen werden.  
+Ebenfalls können Kommentare zu einer Information verfasst werden.  
+Projektleiterin und Projektmitarbeiterin möchten die Informationen nach Tags durchsuchen können.  
+Die Firma Xarelto ist Auftraggeberin. Interne Stakeholder sind die Projektleiterin, die Projektmitarbeitenden und die IT-Beauftrage (ich).  
+Die Kunden von Xarelto sind nur indirekt betroffen und werden deswegen nicht als Stakeholder erwähnt.
 
-**Anpassung der Augfgabestelelung / SCOPE** --> oder einfach github tasks
+[SalomeDiagramm](https://example.com)
 
--Die Anbindung (Schnittstellen) an die umliegende Systeme sowie die Authentification sind nicht im Scope des Projekts.
--Ebenfalls interpretiere ich die "Information" erstmals als reinen text um wie in meinen Zielsetzungne so schnell wie möglich vorwärts zu kommen. Wenn Zeit übrigbleibt möchte ich mich gerne mit dem Ding Inforamtion und dessen enbinsugn und Architektur auseinandersetzten.
+ANPASSUNG UND SPEZIFIZERIUNG DES PROJEKTBESCHRIEBS
 
--
+- Die Anbindung (Schnittstellen) an die umliegenden Systeme sowie die Benutzer Authentifizierung sind nicht Teil des Projekts.
+- Die "Information" interpretiere ich erstmals als reinen Text um, wie in meinen Zielsetzungen beschrieben, so schnell als möglich vorwärtszukommen.
+- Das Attribut «Kernanforderungen» des Projekts streiche ich ebenfalls, da ich dessen Umsetzung für den Lernmehrwert als vernachlässigbar erachte.
+- Löschen oder ändern der Projekte ist nicht möglich.
+---
 
-## Zielsetzung
+##### ZIELSETZUNG
+Ich möchte das Projekt von A bis Z fertigstellen. Um dieses Ziel zu erreichen, werde ich versuchen,
+das Projekt so simpel wie möglich zu halten und nur das Wesentliche umzusetzen.  
+Alles, was ich ohne grössere Konsequenzen weglassen kann, wird ausgelassen. Tasks oder Anforderungen, die im ersten Schritt
+nicht notwendig erscheinen, werden dokumentiert und als solche markiert (siehe GitHub Items in „LaterOrNever“).
+So kann ich sie, falls noch Zeit bleibt,
+zu einem späteren Zeitpunkt umsetzen.  
+Dieses Vorgehen wähle ich, da sich der Zeitaufwand für mich nicht zuverlässig einschätzen lässt.  
+Untenstehend gliedere ich die Unterziele in vier Kategorien:
 
-Ich möchte das Projekt von A-Z fertigstellen. Damit ich das erreichen kann werde ich versuchen das Projekt so simpel wie möglich zu halten und nur das Wichtigste umzusetzten. Alles was ich ohne grössere Konsequenzen weglassen kann, werde ich 
-weglassen. Tasks, Anforderunge, die es zu erledigen gäbe, die ich aber im ersten schritt nicht für notwenig errachte 
-werden festgehalten und als solche markeiert.( siehe Github Items in "LaterOrNever")
-So könnte ich sie, falls noch zeit bleibt, zu einem späteren Zeitpunkt umsetzten. Diese Vorgehen wähle ich weil sich für mich  der Zeitaufwand nicht wirklich einschätzen lässt.
+ANALYSE  
+Ich möchte die Diagramme gemäss dem roten Faden bis zum 2. März erstellt haben, um eine Basis für die Implementierung in c# zu schaffen.
 
+TECHNISCHE UMSETZUNG  
+Die grundlegenden Anforderungen (Aufgelistet im Abschnitt Anforderungen) sollen bis Projektende umgesetzt sein.  
+Zusätzlich möchte ich bis Projektende eine Möglichkeit gefunden haben, die erzeugten Daten zu speichern und mindestens
+zwei Unit-Tests geschrieben haben.
 
-Untenstehend gliedere ich die Unterziele in 4 Kategoriern:
+DOKUMENTATION  
+Ich möchte mich an der Philosophie Documentation as Code orientieren.  
+Nicht nur der Code, sondern auch die Dokumentation wird als .md-Datei
+im GitHub-Repository verfügbar sein.  
+Ausnahme bilden Diagramme, die ich farbig gestalte und daher im Tool „Freeform“ erstelle.  
+Die Dokumentation soll fortlaufend geführt werden, nicht nachträglich. Sie wird immer am Ende einer Arbeitseinheit aktualisiert, damit keine Lücken oder Interpretationsfehler entstehen.
 
-**Analyse**
-Ich möchte die Diagramme entsprechend dem Roten Faden bis zum 2. März erstellt haben, um die Aufgabenstellung analysieren zu können und eine Basis für die Implementierung mit c# zu haben.
+PRÄSENTATION  
+Ich möchte einen Prototyp erstellen, der die implementierten Funktionen widerspiegelt.
 
-**technische Umsetung**
+LERNEN  
+Bis zur Abgabe am 16. März möchte ich das Projekt vollständig durchgespielt haben, sodass ich aus allen Bereichen – Analyse, technische Umsetzung, Dokumentation und Präsentation – etwas lernen kann.
 
-Ich möchte folgende grundlegende Anforderungen bis Projektende umgestzt haben:
+---
 
-PL kann ein Projekt erstellen. (Kernanforderungen streiche ich)
-PM darf kein Projekt erstellen
-Benutzer können eine Information erstellen. (muss immer zu einem Projekt gehören, info sit erstmals nur string)
-Benutzer  müssen die Inormation  mit 1-3 Tags versehen.
-Benutzer können die Information kommentieren. 
-Benutzer können die Inforamtionen nach Tags durchsuchen.
+##### ANALYSE
+Der folgende Abschnitt dient dazu ein besseres Verständnis des Verwaltungssystems zu bekommen.  
+Als Grundlage dient der angepasste Projektbeschrieb.
 
-Ausserdem möchte ich bis zu Projektende eine Datenbank implementiert haben
+KONTEXTDIAGRAMM  
+Das Kontextdiagramm zeigt die vorhandenen Prozesse und Leistungen des Verwaltungssystems
+sowie dessen Beziehungen zu den umliegenden Systemen.  
+Das Verwaltungssystem könnte in einem späteren Schritt an ein CRM-System angebunden werden.  
+Ebenfalls denkbar wäre es, für das Bereitstellen von Inhalten einen eigenen Service zu entwickeln.
 
-Ich möchte mindesten 2 Unittest geschrieben haben.
+[Kontextdiagramm](https://example.com)
 
-**Dokmentation**  
-- Für die Dokumentation möchte ich mich an der Philosophie Documentation as Code orentieren.
-Nicht nur der Code sondern auch die Dokumentaion soll als md file in dem Github Repository zu finden sein. Ausgenommen davon sind die Diagramme, die ich beforzuge mit Farbe zu gestalten und desewgen auf das Tool "freeform" zurückgreifen werde.
-Durch diese Vorgehnen sind alle Unterlagen an einem Ort zu finden und wird mir Zeit sparen.
+USE CASE DIAGRAMM  
+Das Use-Case-Diagramm stellt die Anwendungsfälle dar und zeigt eine Übersicht der geplanten Prozesse im Verwaltungssystem.
 
-- Ich möchte die Dokumentation fortlaufend führen , nicht nachträglich.(immer am Ende einer Arbeitseinheit)  Damit diese nicht durch nachträgliche Interpretation oder Lücken verzehrrt wird.
+[UseCaseDiagramm](https://example.com)
 
-**Präsentation**
+AKTIVITÄTSDIAGRAMM
 
-Ich möchte einen Prototyp erstellten der die Implementierten Funktion wiederspigelt.
+Das Aktivitätsdiagramm zeigt die zwei essenziellen Abläufe.
+1.	Ein Nutzer erstellt ein Projekt mit Projektinfos. Diesem fügt er Informationen hinzu.Für die Information wählt er Tags und erstellt einen Kommentar. Das alles wird in einem Projekt gespeichert.
+2.	Ein Nutzer sucht nach Tags und erhält entsprechende Suchergebnisse
 
+Die Prozesse passieren in 3 verschieden Verantwortlichkeitsbereichen. Eine Projektanlage wo das Projekt erstellt wird und eine Projektablage,
+wo das Projekt gespeichert wird. Der Benutzer stellt die Schnittstelle dar und kann die im Diagramm dargestellten Funktionen aufrufen.
 
-**Lernen**
-Ich möchte bis zur Abgabe am 16. März das ganze Projekt entsprechnd emienr Zielsetzugnen durchgesielt habe, sodass cih  aus allen Bereichen (Analyse, Technische Umsetzung, Dokumentation und Präsentation) etwas lernen kann.
+[Aktivitätsdiagramm](https://example.com)
 
+SEQUENZDIAGRAMM
 
+Das Sequenzdiagramm zeigt, wie Objekte in einem System über die Zeit miteinander interagieren.  
+Daraus können später Klassen und Methoden abgleitet werden.
+Es wird ersichtlich, dass Information und Kommentar vom Projekt abhängige sind und ohne dieses nicht existieren können.
 
-# Vorgehen / Prozess:
-## SetUp
-Febraur
-Ich setzte das Projekt in github auf. In Projects erfasse ich alle aus der Aufgabestellung den Zielsetzungen und Bewertungskriterien herforgehenden Tasks. 
-Jeden Task versehe ich mit Status (to to, in Progress, done, laterOrNever, Fragen), Organisation (Analyse, Doku, Code, Präsentation) und Zeit. 
-Als Entweicklungsumgebeung entscheide ich mich für Riders, da ich diese bereitss kenne und mich gut unterstützt.
+[Sequenzdiagramm](https://example.com)
 
+ZUSTANDSDIAGRAMM
 
-## Analyse
-Februar
-Aus dem Salome-Diagramm entwickle ich die Analysediagramme nach dem *Roten Faden*
-So kann ich die Aufgabe von allen Seiten beleuchten.
-Das Klassendiagramm fertige ich nur rudimentär an, da ich so schnell wie möglich ins coden kommen möchte. Um zu prüfen ob isch meine theoretischen Gedanken in der Praxis auch implementieren lassen.
+Ein Zustandsdiagramm beschreibt die verschiedenen Zustände eines Objekts und die Übergänge, die durch Ereignisse oder Bedingungen ausgelöst werden.  
+Als zentrale Objekte definiere ich Projekt, Information und Kommentar.
 
+[Zustandsdiagramm](https://example.com)
 
+AUFBAU INFORMATION  
+Das Objekt "Information" verlangte nach einer genaueren Untersuchung.  
+Drei möglich Varianten untersuche ich genauer.
 
-## Codeeee
+[AufbauInformation](https://example.com)
 
-Februar
-Ich erstelle die aus dem Klassendagramm abgeleiteten Klassen. Ich möchte als erstes die ganz rudimentären funktionen bauen. Einen User erstellen, der ein Projekt hinzufügen kann.
+---
 
-Um den code zu überprüfen arbeite ich mit consolen ausgaben.
+ANFORDERUNGEN  
+Aus dem angepassten Projektbeschrieb, dem Usecase Diagramm und dem Dokument [Anforderungsanalyse](https://example.com) leite ich folgende grundlegende Anforderungen ab:
+-  Projektleiter (PL) kann ein Projekt erstellen.
+-  Benutzer können eine Information erstellen, die immer einem Projekt zugeordnet sein muss
+-  Benutzer müssen die Information mit 1–3 Tags versehen.
+-  Benutzer können die Information kommentieren.
+-  Benutzer können Informationen eines Projekts nach Tags durchsuchen.
 
-Sollte ich die anforderungen in **Unit tests** schreieben. ICh denke ja.
-X Benuter ID automatisch erstellen
+---
 
-März
-Ich muss mich nach einer Pause wieder einarbeiten und überprüfe nochmals die aufgabenstellung. Nach der wilden rumprobier phase muss ich aus zeitlichen gründen etwwas zielorienterter arbeiten. 
-Die überarbeitetn BASIC Anforderunge iwll ich alle mit einem Unit test festhalten. In dem Testpaln halt ich fest welcher test welche anforderung auf ewelche weise überrüft
+#### TESTS
+Basierend auf den fünf Grundanforderungen entsteht die [Testplanung](https://example.com).
+Um die Applikation auf die grundlegenden Funktionen zu überprüfen, werden die sechs Testfälle in NUnit Tests übersetzt.
 
-ICh übernehme das überarbeite Klassendiagramm und übersetzte es mit hilfe von Chat GPT in c# code.
+---
 
-## Test
-Ich schriebe für die 6 abgeleiteten Basic anforderungen eine Testplan daruas implementiere ich 6 Nunittest.
+#### DATENPERSISTENZ
+Um die Daten zu speichern, entscheide ich mich dafür, JSON-Dateien zu verwenden, da wir das bereits im Unterricht
+behandelt haben und es für mich gut funktioniert hat.  
+Zur Struktur der Datenablage habe ich mehrere Möglichkeiten analysiert.  
+Vor- und Nachteile, sowie deren Einfluss auf die Effizienz der geplanten Suchfunktion, sind in folgendem Dokument festgehalten:
 
+[analyseDatenspeicher](https://example.com)
 
-## Anforderungen 
+Ich entscheide mich für Variante 2, da sie für die projektbezogenen Anforderungen (die Suche innerhalb einzelner Projekte und kleinen Datenmengen)
+am besten geeignet ist.
 
-Februar
-Anforderunganalyse mti chatgpt erstellt. 
+---
 
-Februar late
-Anfoderungen in Primär und sekundär unterteilt um meinem Ziel so einfach wei möglich, dafür fertig treu zu bleibed rei davon in units test festgehalten
+#### IMPLEMENTIERUNG
 
-März
-Nach einer Pause muss ich mich nochmals neu einfinde. Ich überarbeite die Anforderungen nochmals. und einge mich auf deise:
+BASICVERSION 101
 
-PL kann ein Projekt erstellen. (Kernanforderungen streiche ich)
-PM darf kein Projekt erstellen
-Benutzer können eine Information erstellen. (muss immer zu einem Projekt gehören, info sit erstmals nur string)
-Benutzer  müssen die Inormation  mit 1-3 Tags versehen.
-Benutzer können die Information kommentieren. 
-Benutzer können die Inforamtionen nach Tags durchsuchen.
+In einem ersten Schritt wurde eine minimale Version implementiert. (BasicVersion 1.0.1)
+Die Implementation beruht auf dem folgenden Klassendiagramm, das aus der geschilderten Analyse hervorgegangen ist.
 
+[KlassendiagrammBasicVarainte](https://example.com)
+* Die Implementierung ist unter dem TAG "Basic Version 1.0.1" zu finden
 
-##Prototyp
+ADVANCEDVERSION 201
 
-März
-Sinhaftigkeit kann in Fragegestellt werden, aber auch nicht inmeiner Zielsetzung
-Mehr zu analyse zwecjen gedacht als was es sein könnte.
+In einem zweiten Schritt wurde eine erweiterte Version implementiert (AdvancedVersion 2.0.2)
 
-## Iteratives arbeiten
+Mit folgenden Anpassungen:
 
-Fertig rum gepröbelt jetz wird vorwärtsgemacht: Ich überarbetei die anforderungen ans programm nochmals, nur nötigstes.
+-Das Objekt Information wurde erweitert und ist neu nach Varainte ... aufgebaut
+-Die Klassen wurden für eine bessere Übersicht in Module Services unterteilt.
 
-Unittest aktuallisern und testplan erstllen
+[KlassendiagrammAdvancedVarainte](https://example.com)
+* Die Implementierung ist unter dem TAG "Advanced Version 2.0.1" zu finden
+---
+#### Prototyp
 
+Ein Prototyp der Applikation findet sich unter folgendem Link:
 
-## Domainmodeling
-März
-Das im Febrrar sehr rudimenr erstellte Klassendiagramm überarbeite ich nachdem ich dei Anforderungen nochmals geklärt habe.
-ich übernehme alle Bestandteile des Salomediagramm und übersetzte die 5 basic definierten Anforderunge in methoden.
+[Protptyp](https://example.com)
 
+#### VORGEHEN
 
-## Datenbank
-
-März
-Ich habe den Gedanken an die persistene Datensicherung etwas verdrängt und muss diese nun nachholen, nachdem das consolen programm einigermassen läuft.
-
-ich entscheide mih für jason da schon mal gemacht.
-
-Ich ersuch herauszufinden eine Art datenschema zu erstellen. **Learnings**
-
-
-wieso tag eigene tabelle und rolle nciht. Many to many
-Chatgpt schlägt vor benuter im projekt zu speichern. iche ntscheide mich aus architektonischen gründen für eine benutzer un ein projekt repository.
-projetk speichern kommt in dide punktion projekt erstellen
-benutzer nich in konstruktor!
-
-03.
-ich entscheid mich das ding information nochmas genauer anzuschaen und die architektur zu hinterfragen.dies führ dazu dass ich den code nochmals neu baue 
-
-
-## Fragen
-
-
-**Unit tests**
-**private / public dinger**
- 
-## Learnings
-##Reflexion
+---
+#### REFLEXION
