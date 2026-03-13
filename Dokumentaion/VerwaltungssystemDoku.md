@@ -127,10 +127,6 @@ Benutzer können die Information kommentieren.
 Benutzer können die Inforamtionen nach Tags durchsuchen.
 
 
-
-
-
-
 ##Prototyp
 
 März
@@ -164,6 +160,9 @@ wieso tag eigene tabelle und rolle nciht. Many to many
 Chatgpt schlägt vor benuter im projekt zu speichern. iche ntscheide mich aus architektonischen gründen für eine benutzer un ein projekt repository.
 projetk speichern kommt in dide punktion projekt erstellen
 benutzer nich in konstruktor!
+
+03.
+ich entscheid mich das ding information nochmas genauer anzuschaen und die architektur zu hinterfragen.dies führ dazu dass ich den code nochmals neu baue 
 
 
 ## Fragen

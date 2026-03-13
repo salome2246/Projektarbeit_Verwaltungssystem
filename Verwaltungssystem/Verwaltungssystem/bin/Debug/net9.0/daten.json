@@ -9,9 +9,45 @@
       "BenutzerId": 1,
       "Name": "Max",
       "Rolle": 0
+    },
+    {
+      "BenutzerId": 1,
+      "Name": "Max",
+      "Rolle": 0
     }
   ],
   "Projekte": [
+    {
+      "ProjektId": 0,
+      "Name": "Neues IT-Projekt",
+      "Kunde": "Firma XY",
+      "Projektleiter": {
+        "BenutzerId": 1,
+        "Name": "Max",
+        "Rolle": 0
+      },
+      "Informationen": [
+        {
+          "InfoId": 0,
+          "Inhalt": "Kickoff Meeting geplant",
+          "Tags": [
+            0,
+            1
+          ],
+          "Kommentare": [
+            {
+              "KommentarId": 0,
+              "Inhalt": "Bitte Agenda vorbereiten",
+              "Autor": {
+                "BenutzerId": 1,
+                "Name": "Max",
+                "Rolle": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
     {
       "ProjektId": 0,
       "Name": "Neues IT-Projekt",
