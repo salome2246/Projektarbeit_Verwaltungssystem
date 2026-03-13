@@ -15,7 +15,7 @@ class Program
         }
 
         // Pfad zur JSON-Datei
-        string filePath = Path.Combine(ordner, "//Users/salome/Desktop/Verwaltungssystem02/Verwaltungssystem02/Datenspeicher/daten.json");
+        string filePath = Path.Combine(ordner, "//Users/salome/Desktop/AL/Projektarbeit_Verwaltungssystem/Verwaltungssystem/Verwaltungssystem/Datenspeicher/daten.json");
         DatenContext context = DatenContext.Load(filePath);
         
         ProjectService projectService = new ProjectService();
