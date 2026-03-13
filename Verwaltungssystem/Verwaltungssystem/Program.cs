@@ -1,63 +1,176 @@
 ﻿using System.Text.Json;
+using Verwaltungssystem.Services;
 
 namespace Verwaltungssystem;
-
 class Program
 {
     static void Main(string[] args)
     {
-        // 1️⃣ DatenContext laden oder neu erstellen
-        DatenContext context;
+        string ordner = "Datenspeicher";
 
-        if (File.Exists("daten.json"))
+        // Prüfen, ob Ordner existiert, sonst erstellen
+        if (!Directory.Exists(ordner))
         {
-            string json = File.ReadAllText("daten.json");
-            context = JsonSerializer.Deserialize<DatenContext>(json) ?? new DatenContext();
-        }
-        else
-        {
-            context = new DatenContext();
-        }
-        
-        // 1️⃣ Benutzer erstellen
-        Benutzer max = new Benutzer { BenutzerId = 1, Name = "Max", Rolle = Rolle.Projektleiter };
-        context.Benutzer.Add(max);
-        
-        // 2️⃣ Benutzer erstellt ein Projekt
-        Projekt projekt1 = max.ErstelleProjekt("Neues IT-Projekt", "Firma XY",context);
-        Console.WriteLine($"Projekt '{projekt1.Name}' wurde erstellt von {projekt1.Projektleiter.Name}.");
-        
-
-        // 3️⃣ Benutzer fügt dem Projekt eine Information mit Tags hinzu
-        List<Tag> tags = new List<Tag> { Tag.Gelb, Tag.Rosa };
-        Information info1 = max.SchreibeInformation(projekt1, "Kickoff Meeting geplant", tags);
-        Console.WriteLine($"Information hinzugefügt: '{info1.Inhalt}' mit Tags: {string.Join(", ", info1.Tags)}");
-
-        // 4️⃣ Benutzer fügt der Information einen Kommentar hinzu
-        Kommentar kommentar1 = max.SchreibeKommentar(info1, "Bitte Agenda vorbereiten");
-        Console.WriteLine($"Kommentar von {kommentar1.Autor.Name}: '{kommentar1.Inhalt}'");
-        
-        var resultate = max.SucheNachTag(Tag.Gelb, context);
-
-        foreach (var info in resultate)
-        {
-            Console.WriteLine(info.Inhalt);
+            Directory.CreateDirectory(ordner);
         }
 
-        // 5️⃣ Optional: Ausgabe aller Informationen und Kommentare des Projekts
-        Console.WriteLine("\nProjektübersicht:");
-        foreach (var info in projekt1.Informationen)
+        // Pfad zur JSON-Datei
+        string filePath = Path.Combine(ordner, "//Users/salome/Desktop/Verwaltungssystem02/Verwaltungssystem02/Datenspeicher/daten.json");
+        DatenContext context = DatenContext.Load(filePath);
+        
+        ProjectService projectService = new ProjectService();
+        InformationService infoService = new InformationService();
+       
+
+        Benutzer projektleiter = new Benutzer(1, "Max", Rolle.Projektleiter);
+        Benutzer mitarbeiter = new Benutzer(2, "Anna", Rolle.Mitarbeiter);
+
+        Projekt aktuellesProjekt = null;
+        Information aktuelleInfo = null;
+        
+        bool running = true;
+
+        while (running)
         {
-            Console.WriteLine($"- Information: {info.Inhalt} [Tags: {string.Join(", ", info.Tags)}]");
-            foreach (var com in info.Kommentare)
+            Console.WriteLine("\n--- Verwaltungssystem Menü ---");
+            Console.WriteLine("1 Projekt erstellen");
+            Console.WriteLine("2 Information schreiben");
+            Console.WriteLine("3 Tag hinzufügen");
+            Console.WriteLine("4 Kommentar schreiben");
+            Console.WriteLine("5 Nach Tag suchen");
+            Console.WriteLine("6 Beenden");
+
+            Console.Write("Auswahl: ");
+            string eingabe = Console.ReadLine();
+
+            switch (eingabe)
             {
-                Console.WriteLine($"  - Kommentar von {com.Autor.Name}: {com.Inhalt}");
+                case "1":
+                    Console.Write("Projektname: ");
+                    string pname = Console.ReadLine();
+
+                    Console.Write("Kunde: ");
+                    string kunde = Console.ReadLine();
+
+                    aktuellesProjekt = projectService.erstelleProjekt(
+                        pname,
+                        kunde,
+                        projektleiter,
+                        context
+                    );
+
+                    Console.WriteLine("Projekt erstellt!");
+                    break;
+
+                case "2":
+                    if (aktuellesProjekt == null)
+                    {
+                        Console.WriteLine("Bitte zuerst ein Projekt erstellen.");
+                        break;
+                    }
+
+                    Console.Write("Information Inhalt: ");
+                    string text = Console.ReadLine();
+
+                    aktuelleInfo = infoService.erstelleInformation(
+                        aktuellesProjekt,
+                        mitarbeiter,
+                        Informationstyp.Text,
+                        text
+                    );
+
+                    Console.WriteLine("Information erstellt.");
+                    break;
+
+                case "3":
+                    if (aktuelleInfo == null)
+                    {
+                        Console.WriteLine("Bitte zuerst eine Information erstellen.");
+                        break;
+                    }
+
+                    Console.WriteLine("Tag wählen:");
+                    Console.WriteLine("1 Rosa");
+                    Console.WriteLine("2 Grün");
+                    Console.WriteLine("3 Gelb");
+                    Console.WriteLine("4 Blau");
+
+                    string tagInput = Console.ReadLine();
+
+                    Tag tag = tagInput switch
+                    {
+                        "1" => Tag.Rosa,
+                        "2" => Tag.Grün,
+                        "3" => Tag.Gelb,
+                        "4" => Tag.Blau,
+                        _ => throw new Exception("Ungültiger Tag")
+                    };
+
+                    infoService.tagHinzufügen(aktuelleInfo, tag);
+
+                    Console.WriteLine("Tag hinzugefügt.");
+                    break;
+
+                case "4":
+                    if (aktuelleInfo == null)
+                    {
+                        Console.WriteLine("Bitte zuerst eine Information erstellen.");
+                        break;
+                    }
+
+                    Console.Write("Kommentar: ");
+                    string kommentarText = Console.ReadLine();
+
+                    infoService.kommentarHinzufügen(
+                        aktuelleInfo,
+                        projektleiter,
+                        kommentarText
+                    );
+
+                    Console.WriteLine("Kommentar hinzugefügt.");
+                    break;
+
+                case "5":
+
+                    Console.WriteLine("Nach welchem Tag suchen?");
+                    Console.WriteLine("1 Rosa");
+                    Console.WriteLine("2 Grün");
+                    Console.WriteLine("3 Gelb");
+                    Console.WriteLine("4 Blau");
+
+                    string suche = Console.ReadLine();
+
+                    Tag suchTag = suche switch
+                    {
+                        "1" => Tag.Rosa,
+                        "2" => Tag.Grün,
+                        "3" => Tag.Gelb,
+                        "4" => Tag.Blau,
+                        _ => throw new Exception("Ungültiger Tag")
+                    };
+
+                    var infos = context.SucheInformationenNachTag(suchTag);
+
+                    Console.WriteLine("\nGefundene Informationen:");
+
+                    foreach (var info in infos)
+                    {
+                        Console.WriteLine(info.Inhalt);
+                    }
+
+                    break;
+
+                case "6":
+                    running = false;
+                    break;
+
+                default:
+                    Console.WriteLine("Ungültige Auswahl.");
+                    break;
             }
         }
         
-        var options = new JsonSerializerOptions { WriteIndented = true };
-        File.WriteAllText("daten.json", JsonSerializer.Serialize(context, options));
+        // Daten speichern
+        context.Save(filePath);
     }
-    
-    //
 }
