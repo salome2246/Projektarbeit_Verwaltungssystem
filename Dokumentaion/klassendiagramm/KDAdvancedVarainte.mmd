@@ -1,0 +1,68 @@
+classDiagram
+
+class Tag {
+    <<enumeration>>
+    Rosa
+    Grün
+    Gelb
+    Blau
+}
+
+class Rolle {
+    <<enumeration>>
+    projektleiter
+    mitarbeiter
+}
+class Informationstyp{
+    <<enumeration>>
+    text
+    image
+    link
+    file
+}
+
+class Benutzer {
+    String name
+    Rolle rolle
+}
+
+class Projekt {
+    String name
+    String kunde
+    Benutzer projektleiter
+}
+
+
+class Information {
+    Informationstyp typ
+    String inhalt
+    Tag tags
+    Benutzer author
+    
+}
+
+
+class Kommentar {
+    String text
+    Benutzer author
+}
+
+
+class InformationService{
+    ErstelleInformation()
+    KommentarHinzufügen()
+    TagHinzufügen()
+}
+
+class ProjectService{
+    ErstelleProjetk()
+    InformationHinzufügen()  
+}
+
+
+
+Projekt "0..*" -- "1" Benutzer: kennt
+Projekt "1" *-- "0..*" Information : enthält
+Information "1" *-- "0..*" Kommentar : enthält
+
+
