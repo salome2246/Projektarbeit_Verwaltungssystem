@@ -36,7 +36,7 @@ Projektleiterin und Projektmitarbeiterin möchten die Informationen nach Tags du
 Die Firma Xarelto ist Auftraggeberin. Interne Stakeholder sind die Projektleiterin, die Projektmitarbeitenden und die IT-Beauftrage (ich).  
 Die Kunden von Xarelto sind nur indirekt betroffen und werden deswegen nicht als Stakeholder erwähnt.
 
-[SalomeDiagramm](01_salomeDiagramm.png)
+[SalomeDiagramm](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/analyse/01_salomeDiagramm.png)
 
 ANPASSUNG UND SPEZIFIZERIUNG DES PROJEKTBESCHRIEBS
 
@@ -89,12 +89,12 @@ sowie dessen Beziehungen zu den umliegenden Systemen.
 Das Verwaltungssystem könnte in einem späteren Schritt an ein CRM-System angebunden werden.  
 Ebenfalls denkbar wäre es, für das Bereitstellen von Inhalten einen eigenen Service zu entwickeln.
 
-[Kontextdiagramm](https://example.com)
+[Kontextdiagramm](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/analyse/02_kontextdiagramm.png)
 
 USE CASE DIAGRAMM  
 Das Use-Case-Diagramm stellt die Anwendungsfälle dar und zeigt eine Übersicht der geplanten Prozesse im Verwaltungssystem.
 
-[UseCaseDiagramm](https://example.com)
+[UseCaseDiagramm](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/analyse/03_useCaseDiagramm.png)
 
 AKTIVITÄTSDIAGRAMM
 
@@ -105,7 +105,7 @@ Das Aktivitätsdiagramm zeigt die zwei essenziellen Abläufe.
 Die Prozesse passieren in 3 verschieden Verantwortlichkeitsbereichen. Eine Projektanlage wo das Projekt erstellt wird und eine Projektablage,
 wo das Projekt gespeichert wird. Der Benutzer stellt die Schnittstelle dar und kann die im Diagramm dargestellten Funktionen aufrufen.
 
-[Aktivitätsdiagramm](https://example.com)
+[Aktivitätsdiagramm](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/analyse/03_useCaseDiagramm.png)
 
 SEQUENZDIAGRAMM
 
@@ -113,25 +113,25 @@ Das Sequenzdiagramm zeigt, wie Objekte in einem System über die Zeit miteinande
 Daraus können später Klassen und Methoden abgleitet werden.
 Es wird ersichtlich, dass Information und Kommentar vom Projekt abhängige sind und ohne dieses nicht existieren können.
 
-[Sequenzdiagramm](https://example.com)
+[Sequenzdiagramm](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/analyse/05_sequenzdiagramm.png)
 
 ZUSTANDSDIAGRAMM
 
 Ein Zustandsdiagramm beschreibt die verschiedenen Zustände eines Objekts und die Übergänge, die durch Ereignisse oder Bedingungen ausgelöst werden.  
 Als zentrale Objekte definiere ich Projekt, Information und Kommentar.
 
-[Zustandsdiagramm](https://example.com)
+[Zustandsdiagramm](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/analyse/06_zustandsdiagramm.png)
 
 AUFBAU INFORMATION  
 Das Objekt "Information" verlangte nach einer genaueren Untersuchung.  
 Drei möglich Varianten untersuche ich genauer.
 
-[AufbauInformation](https://example.com)
+[InforamtionVarainten](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/analyse/informationVarainte.pdf)
 
 ---
 
 ANFORDERUNGEN  
-Aus dem angepassten Projektbeschrieb, dem Usecase Diagramm und dem Dokument [Anforderungsanalyse](https://example.com) leite ich folgende grundlegende Anforderungen ab:
+Aus dem angepassten Projektbeschrieb, dem Usecase Diagramm und dem Dokument [Anforderungsanalyse](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/analyse/Anforderungsanalyse.pdf) leite ich folgende grundlegende Anforderungen ab:
 -  Projektleiter (PL) kann ein Projekt erstellen.
 -  Benutzer können eine Information erstellen, die immer einem Projekt zugeordnet sein muss
 -  Benutzer müssen die Information mit 1–3 Tags versehen.
@@ -141,7 +141,7 @@ Aus dem angepassten Projektbeschrieb, dem Usecase Diagramm und dem Dokument [Anf
 ---
 
 #### TESTS
-Basierend auf den fünf Grundanforderungen entsteht die [Testplanung](https://example.com).
+Basierend auf den fünf Grundanforderungen entsteht die [Testplanung](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/test/Testplanung.pdf).
 Um die Applikation auf die grundlegenden Funktionen zu überprüfen, werden die sechs Testfälle in NUnit Tests übersetzt.
 
 ---
@@ -152,7 +152,7 @@ behandelt haben und es für mich gut funktioniert hat.
 Zur Struktur der Datenablage habe ich mehrere Möglichkeiten analysiert.  
 Vor- und Nachteile, sowie deren Einfluss auf die Effizienz der geplanten Suchfunktion, sind in folgendem Dokument festgehalten:
 
-[analyseDatenspeicher](https://example.com)
+[PersistenzVarainten](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/persistenz/persistenzVarainten.pdf)
 
 Ich entscheide mich für Variante 2, da sie für die projektbezogenen Anforderungen (die Suche innerhalb einzelner Projekte und kleinen Datenmengen)
 am besten geeignet ist.
@@ -166,7 +166,7 @@ BASICVERSION 101
 In einem ersten Schritt wurde eine minimale Version implementiert. (BasicVersion 1.0.1)
 Die Implementation beruht auf dem folgenden Klassendiagramm, das aus der geschilderten Analyse hervorgegangen ist.
 
-[KlassendiagrammBasicVarainte](https://example.com)
+[KlassendiagrammBasicVarainte](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/klassendiagramm/KDBasicVariante.mmd)
 * Die Implementierung ist unter dem TAG "Basic Version 1.0.1" zu finden
 
 ADVANCEDVERSION 201
@@ -178,7 +178,7 @@ Mit folgenden Anpassungen:
 -Das Objekt Information wurde erweitert und ist neu nach Varainte ... aufgebaut
 -Die Klassen wurden für eine bessere Übersicht in Module Services unterteilt.
 
-[KlassendiagrammAdvancedVarainte](https://example.com)
+[KlassendiagrammAdvancedVarainte](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/klassendiagramm/KDAdvancedVarainte.mmd)
 * Die Implementierung ist unter dem TAG "Advanced Version 2.0.1" zu finden
 ---
 #### Prototyp
