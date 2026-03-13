@@ -96,8 +96,7 @@ Das Use-Case-Diagramm stellt die Anwendungsfälle dar und zeigt eine Übersicht 
 
 [UseCaseDiagramm](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/analyse/03_useCaseDiagramm.png)
 
-AKTIVITÄTSDIAGRAMM
-
+AKTIVITÄTSDIAGRAMM  
 Das Aktivitätsdiagramm zeigt die zwei essenziellen Abläufe.
 1.	Ein Nutzer erstellt ein Projekt mit Projektinfos. Diesem fügt er Informationen hinzu.Für die Information wählt er Tags und erstellt einen Kommentar. Das alles wird in einem Projekt gespeichert.
 2.	Ein Nutzer sucht nach Tags und erhält entsprechende Suchergebnisse
@@ -107,16 +106,14 @@ wo das Projekt gespeichert wird. Der Benutzer stellt die Schnittstelle dar und k
 
 [Aktivitätsdiagramm](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/analyse/03_useCaseDiagramm.png)
 
-SEQUENZDIAGRAMM
-
+SEQUENZDIAGRAMM  
 Das Sequenzdiagramm zeigt, wie Objekte in einem System über die Zeit miteinander interagieren.  
 Daraus können später Klassen und Methoden abgleitet werden.
 Es wird ersichtlich, dass Information und Kommentar vom Projekt abhängige sind und ohne dieses nicht existieren können.
 
 [Sequenzdiagramm](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/analyse/05_sequenzdiagramm.png)
 
-ZUSTANDSDIAGRAMM
-
+ZUSTANDSDIAGRAMM  
 Ein Zustandsdiagramm beschreibt die verschiedenen Zustände eines Objekts und die Übergänge, die durch Ereignisse oder Bedingungen ausgelöst werden.  
 Als zentrale Objekte definiere ich Projekt, Information und Kommentar.
 
@@ -126,7 +123,7 @@ AUFBAU INFORMATION
 Das Objekt "Information" verlangte nach einer genaueren Untersuchung.  
 Drei möglich Varianten untersuche ich genauer.
 
-[InforamtionVarainten](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/analyse/informationVarainte.pdf)
+[InformationVarianten](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/analyse/informationVarainte.pdf)
 
 ---
 
@@ -148,13 +145,14 @@ Um die Applikation auf die grundlegenden Funktionen zu überprüfen, werden die 
 
 #### DATENPERSISTENZ
 Um die Daten zu speichern, entscheide ich mich dafür, JSON-Dateien zu verwenden, da wir das bereits im Unterricht
-behandelt haben und es für mich gut funktioniert hat.  
+behandelt haben.  
 Zur Struktur der Datenablage habe ich mehrere Möglichkeiten analysiert.  
 Vor- und Nachteile, sowie deren Einfluss auf die Effizienz der geplanten Suchfunktion, sind in folgendem Dokument festgehalten:
 
 [PersistenzVarainten](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/persistenz/persistenzVarainten.pdf)
 
-Ich entscheide mich für Variante 2, da sie für die projektbezogenen Anforderungen (die Suche innerhalb einzelner Projekte und kleinen Datenmengen)
+Auf Basis dieser Analyse entscheide ich mich für Variante 2, 
+da sie für die projektbezogenen Anforderungen (die Suche innerhalb einzelner Projekte und kleine Datenmengen)
 am besten geeignet ist.
 
 ---
@@ -163,15 +161,15 @@ am besten geeignet ist.
 
 BASICVERSION 101
 
-In einem ersten Schritt wurde eine minimale Version implementiert. (BasicVersion 1.0.1)
-Die Implementation beruht auf dem folgenden Klassendiagramm, das aus der geschilderten Analyse hervorgegangen ist.
+In einem ersten Schritt wurde eine minimale Version der Anwendung implementiert [BasicVersion 1.0.1](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/tags)
+
+Die Implementierung basiert auf dem folgenden Klassendiagramm, das aus der Analyse in Kapitel zwei hervorgegangen ist.
 
 [KlassendiagrammBasicVarainte](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/klassendiagramm/KDBasicVariante.mmd)
-* Die Implementierung ist unter dem TAG "Basic Version 1.0.1" zu finden
 
 ADVANCEDVERSION 201
 
-In einem zweiten Schritt wurde eine erweiterte Version implementiert (AdvancedVersion 2.0.2)
+In einem zweiten Schritt wurde eine erweiterte Version implementiert [AdvancedVersion 2.0.2]()
 
 Mit folgenden Anpassungen:
 
@@ -179,7 +177,7 @@ Mit folgenden Anpassungen:
 -Die Klassen wurden für eine bessere Übersicht in Module Services unterteilt.
 
 [KlassendiagrammAdvancedVarainte](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/klassendiagramm/KDAdvancedVarainte.mmd)
-* Die Implementierung ist unter dem TAG "Advanced Version 2.0.1" zu finden
+
 ---
 #### Prototyp
 
