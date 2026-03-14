@@ -7,15 +7,15 @@
 
 
 ##### INHALTSVERZEICHNIS
-1. [AUFGABENSTELLUNG](#PROJEKTBESCHIREB)
-2. [PROJEKTBESCHIREB](#projektstruktur)
-4. [ZIELSETZUNG](#services)
-5. [ANALYSE](#services)
-6. [TESTS](#services)
-7. [DATENPERSISTENZ](#services)
-8. [IMPLEMENTIERUNG](#)
-8. [VORGEHEN](#services)
-9. [REFLEXION](#REFLEXION)
+1. [AUFGABENSTELLUNG](#aufgabenstellung)
+2. [PROJEKTBESCHIREB](#projektbeschrieb)
+4. [ZIELSETZUNG](#zielsetzung)
+5. [ANALYSE](#analyse)
+6. [TESTS](#tests)
+7. [DATENPERSISTENZ](#datenpersistenz)
+8. [IMPLEMENTIERUNG](#implementierung)
+8. [VORGEHEN](#vorgehen)
+9. [REFLEXION](#reflexion)
 
 
 ##### AUFGABENSTELLUNG
@@ -173,8 +173,9 @@ In einem zweiten Schritt wurde eine erweiterte Version implementiert [AdvancedVe
 
 Mit folgenden Anpassungen:
 
--Das Objekt Information wurde erweitert und ist neu nach Varainte ... aufgebaut
--Die Klassen wurden für eine bessere Übersicht in Module und Services unterteilt.
+- Das Objekt Information wurde um einen "Informationstyp" erweitert. 
+- Ein InformationsService und ein ProjektService übernehmen neu das Erstellen von Projekt und Infos.
+- Die Klassen wurden für eine bessere Übersicht in Module und Services unterteilt.
 
 [KlassendiagrammAdvancedVarainte](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/klassendiagramm/KDAdvancedVarainte.mmd)
 
@@ -249,6 +250,24 @@ Nachdem ich das Gröbste behoben habe, entscheide ich mich, das Projekt vorerst 
 ---
 #### REFLEXION
 
+ZIELERREICHUNG:  
+Analyse: Ich konnte die benötigten Diagramme umsetzen. Das anfangs etwas parallele stattfinden von Analyse und Umsetzung empfand ich dabei als hilfreich.
 
+Technische Umsetzung: Ich konnte die grundlegenden Anforderungen umsetzen und diese auch mittels Tests überprüfen. Die Daten können in einer JSON-Datei gespeichert werden. Gleichzeitig bin ich mir bewusst, dass noch viele Funktionen fehlen, die für ein wirkliches Funktionieren der Applikation notwendig wären.
+
+Dokumentation: Das fortlaufende Führen der Dokumentation ist zeitweise etwas auf der Strecke geblieben. Documentation as Code konnte ich im Endeffekt zwar so umsetzten, hat aber nur so mässig gut funktioniert. Da die Dokumentationsdatei für mich ein Arbeitstool ist, das ich immer wieder überarbeite, ist ein Word-Dokument mit seinen erweiterten Textbearbeitungsmöglichkeiten letztlich praktischer.
+
+Präsentation: Da es zeitlich nicht gereicht hat, mich in ein Prototyping-Tool einzuarbeiten, habe ich mich entschieden, mich auf die Visualisierung des UI zu beschränken. Dies hat mir dennoch geholfen, die Anforderungen noch einmal zu überprüfen.
+
+Lernen: Ich konnte auf jeden Fall aus jedem Bereich etwas lernen. Möglicherweise habe ich mich etwas zu sehr auf Dokumentation und Organisation fokussiert, während das Recherchieren etwas zu kurz gekommen ist.
+
+Abschliessend kann ich sagen, dass ich den Aufwand auf jeden Fall unterschätzt habe.
+Da ich in der Softwareentwicklung noch wenig Erfahrung habe, habe ich auch viel Zeit mit eher banalen Aufgaben verloren.
+Aufgrund des Zeitdrucks war ich zudem etwas hin- und hergerissen zwischen Ausprobieren, Lernen und dem möglichst effizienten Erreichen der Projektziele. Ebenfalls wäre es hilfreich gewesen, etwas früher zu beginnen, um mir rechtzeitig Hilfe holen zu können.
+
+Ausblick:
+-Sicher Basic Sache  (ämderä löschä ladä)
+-Suchefunktion nomal ahluge
+-architektur
 
 
