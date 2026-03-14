@@ -14,9 +14,9 @@ class Program
             "//Users/salome/Desktop/AL/Projektarbeit_Verwaltungssystem/Verwaltungssystem/Verwaltungssystem/Datenspeicher/daten.json");
         
         DatenContext context = DatenContext.Load(filePath);
-        
-        ProjectService projectService = new ProjectService();
         InformationService infoService = new InformationService();
+        ProjectService projectService = new ProjectService(infoService);
+        
 
         Benutzer projektleiter = new Benutzer(1, "Salome", Rolle.Projektleiter);
         Benutzer mitarbeiter = new Benutzer(2, "Bertrand", Rolle.Mitarbeiter);
@@ -25,9 +25,8 @@ class Program
         context.Benutzer.Add(mitarbeiter);
         
         Projekt projektA = projectService.erstelleProjekt("ProjektA","Kunde1",projektleiter,context);
-        Information infoA = infoService.erstelleInformation(projektA, mitarbeiter, Informationstyp.Text, "Das ist die Info");
-        projectService.informationHinzufügen(projektA,infoA);
-        infoService.kommentarHinzufügen(infoA,mitarbeiter,"das ist der Kommentar 1");
+        projectService.informationHinzufügen(projektA, mitarbeiter, Informationstyp.Text, "das ist die information");
+        
 
         var inhalteMitBlau = context.SucheInformationenNachTag(Tag.Gelb);
 

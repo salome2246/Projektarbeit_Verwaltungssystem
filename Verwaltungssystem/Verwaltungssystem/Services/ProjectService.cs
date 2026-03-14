@@ -4,6 +4,12 @@ public class ProjectService
 {
     private List<Projekt> projekte = new List<Projekt>();
     private int nextProjectId = 1;
+    private InformationService informationService;
+    
+    public ProjectService(InformationService informationService)
+    {
+        this.informationService = informationService;
+    }
     
     public Projekt erstelleProjekt(string name, string kunde, Benutzer projektleiter,DatenContext context)
     {
@@ -12,7 +18,6 @@ public class ProjectService
         {
             throw new InvalidOperationException("Nur Benutzer mit der Rolle 'Projektleiter' dürfen ein Projekt erstellen.");
         }
-        
         Projekt p = new Projekt
         {
             Id = nextProjectId++,
@@ -24,8 +29,8 @@ public class ProjectService
         return p;
     }
 
-    public void informationHinzufügen(Projekt projekt, Information info)
+    public Information informationHinzufügen(Projekt projekt, Benutzer autor, Informationstyp typ, string inhalt)
     {
-        projekt.Informationen.Add(info);
+        return informationService.erstelleInformation(projekt, autor, typ, inhalt);
     }
 }
