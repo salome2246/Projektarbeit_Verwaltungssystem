@@ -25,7 +25,8 @@ class Program
         context.Benutzer.Add(mitarbeiter);
         
         Projekt projektA = projectService.erstelleProjekt("ProjektA","Kunde1",projektleiter,context);
-        projectService.informationHinzufügen(projektA, mitarbeiter, Informationstyp.Text, "das ist die information");
+        Information informationA = projectService.informationHinzufügen(projektA, mitarbeiter, Informationstyp.Text, "das ist die information");
+        infoService.kommentarHinzufügen(informationA, mitarbeiter, "das ist der Kommentar");
         
 
         var inhalteMitBlau = context.SucheInformationenNachTag(Tag.Gelb);

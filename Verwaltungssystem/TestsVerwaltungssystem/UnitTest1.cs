@@ -22,8 +22,9 @@ public class Tests
     public void Setup()
     {
         context = new DatenContext();
-        projectService = new ProjectService();
         infoService = new InformationService();
+        projectService = new ProjectService(infoService);
+        
 
         projektleiter = new Benutzer(1, "salome", Rolle.Projektleiter);
         mitarbeiter = new Benutzer(2, "bertrand", Rolle.Mitarbeiter);
