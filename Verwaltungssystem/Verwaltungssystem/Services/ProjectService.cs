@@ -2,14 +2,8 @@ namespace Verwaltungssystem.Services;
 
 public class ProjectService
 {
-    private List<Projekt> projekte = new List<Projekt>();
     private int nextProjectId = 1;
-    private InformationService informationService;
     
-    public ProjectService(InformationService informationService)
-    {
-        this.informationService = informationService;
-    }
     
     public Projekt erstelleProjekt(string name, string kunde, Benutzer projektleiter,DatenContext context)
     {
@@ -28,9 +22,5 @@ public class ProjectService
         context.Projekte.Add(p);
         return p;
     }
-
-    public Information informationHinzufügen(Projekt projekt, Benutzer autor, Informationstyp typ, string inhalt)
-    {
-        return informationService.erstelleInformation(projekt, autor, typ, inhalt);
-    }
+    
 }

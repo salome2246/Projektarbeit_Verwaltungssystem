@@ -23,7 +23,7 @@ public class Tests
     {
         context = new DatenContext();
         infoService = new InformationService();
-        projectService = new ProjectService(infoService);
+        projectService = new ProjectService();
         
 
         projektleiter = new Benutzer(1, "salome", Rolle.Projektleiter);

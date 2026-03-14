@@ -15,7 +15,7 @@ class Program
         
         DatenContext context = DatenContext.Load(filePath);
         InformationService infoService = new InformationService();
-        ProjectService projectService = new ProjectService(infoService);
+        ProjectService projectService = new ProjectService();
         
 
         Benutzer projektleiter = new Benutzer(1, "Salome", Rolle.Projektleiter);
@@ -24,10 +24,10 @@ class Program
         context.Benutzer.Add(projektleiter);
         context.Benutzer.Add(mitarbeiter);
         
-        Projekt projektA = projectService.erstelleProjekt("ProjektA","Kunde1",projektleiter,context);
-        Information informationA = projectService.informationHinzufügen(projektA, mitarbeiter, Informationstyp.Text, "das ist die information");
-        infoService.kommentarHinzufügen(informationA, mitarbeiter, "das ist der Kommentar");
-        
+        Projekt projektA = projectService.erstelleProjekt("ProjektA","KundeA",projektleiter,context);
+        Information infoA = infoService.erstelleInformation(projektA, mitarbeiter, Informationstyp.Text, "das is die inforamtion");
+        infoService.kommentarHinzufügen(infoA, mitarbeiter,"das ist der kommentar");
+        infoService.tagHinzufügen(infoA,Tag.Blau);
 
         var inhalteMitBlau = context.SucheInformationenNachTag(Tag.Gelb);
 
