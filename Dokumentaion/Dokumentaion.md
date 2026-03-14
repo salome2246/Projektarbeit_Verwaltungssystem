@@ -185,8 +185,66 @@ Eine UI- Visualiserung der Applikation findet sich unter folgendem Link:
 
 [Protptyp](https://example.com)
 
-#### VORGEHEN
+---
 
+#### VORGEHEN
+Grob lässt sich das Vorgehen in drei Phasen beschreiben:
+
+Phase 01 – Experimentierphase
+
+Phase 02 – Überarbeitungs- und Anpassungsphase
+
+Phase 03 - Clear to Chaotic
+
+Die Abschnitte wurden entsprechend in 01, 02 und 03 unterteilt.
+
+SETUP  
+01: Ich setze das Projekt auf GitHub auf. Im Bereich Projects erfasse ich alle Tasks, die sich aus der Aufgabestellung, den Zielsetzungen und den Bewertungskriterien ergeben.
+
+Jeden Task versehe ich mit folgenden Angaben:
+
+Status: To Do, In Progress, Done, LaterOrNever, Fragen
+
+Organisation: Analyse, Dokumentation, Code, Präsentation
+
+Zeitaufwand: Aufgewendete Zeit für den jeweilgen Task.
+
+Als Entwicklungsumgebung entscheide ich mich für Rider, da ich damit bereits vertraut bin und die IDE mich gut unterstützt.
+
+
+ANALYSE  
+01: Ich versuche, die Projektbeschreibung so einfach wie möglich zu interpretieren, da meine Erfahrung noch sehr begrenzt ist und ich den Zeitaufwand nur schwer abschätzen kann.
+Die Aufgabenstellung übersetze ich in ein Salome Diagramm. Dadurch kann ich den Inhalt ohne formale Vorschriften grafisch darstellen. Das hilft mir, den Sachverhalt besser zu verstehen und einen ersten Überblick zu gewinnen. Wichtig ist mir dabei, alle relevanten Informationen aus dem Text zu übernehmen, damit nichts vergessen wird.
+
+Darauf aufbauend entwickle ich die Analysediagramme nach dem Roten Faden, um das Verwaltungssystem aus allen Blickwinkeln zu beleuchten. Das Klassendiagramm erstelle ich zunächst nur rudimentär, da ich möglichst schnell in die Umsetzung gehen möchte, um zu prüfen, ob sich meine theoretischen Überlegungen auch praktisch implementieren lassen.
+
+02: Bei der Umsetzung stelle ich fest, dass noch einige Unklarheiten bestehen.
+Ich untersuche den Aufbau der „Information“ genauer und überlege, welche Struktur sich für die Speicherung meiner Daten eignet.
+Zudem gliedere ich den Code in Modelle, Enums sowie in einen ProjektService und einen InformationsService, die jeweils für die entsprechenden Funktionen zuständig sind. Das erscheint mir insgesamt übersichtlicher.
+
+UMSETZUNG
+
+01: Im ersten Schritt arbeite ich experimentell. Ich erstelle die Klassen, die sich aus dem Klassendiagramm ableiten lassen, und beginne mit den rudimentären Funktionen, die ich zuvor in der Analyse identifiziert habe.
+
+Zunächst nutze ich Konsolenausgaben, um den Code zu überprüfen. Danach entscheide ich mich, Unit-Tests zu implementieren, die die Kontrolle über die Funktionsweise übernehmen. Die einzelnen Teile des Codes lasse ich von KI generieren. Die Datenspeicherung berücksichtige ich zunächst leider überhaupt nicht.
+
+Schnell stelle ich fest, dass ich einige Punkte genauer betrachten muss:
+
+- Unit-Tests
+
+- Struktur der Datenspeicherung
+
+- Aufbau der Informationen
+
+- Gesamtstruktur des Programms
+
+Ich gehe in die Recherche und versuche die verschieden Themen zu klären.
+
+02: Basierend auf den Erkenntnissen meiner Recherchen erstelle ich ein zweites Klassendiagramm und strukturiere meinen Code neu. Ebenfalls implementiere ich eine Suchfunktion. Als Ergänzung lasse ich ein kleines Konsolenprogramm generieren über das die Grundlegenden Funktionen gesteuert werden können.
+
+03: Ich möchte das kleine Konsolenprogramm durch manuell erstellte Objekte ersetzen, da ich das für übersichtlicher halte.
+Leider vergesse ich vorher zu committen, springe von einer Änderung zur nächsten und stelle fest, dass Informationen doppelt gespeichert werden. Ich wechsle von einer Anpassung zur anderen und lande schließlich im Chaos.
+Nachdem ich das Gröbste behoben habe, entscheide ich mich, das Projekt vorerst so stehen zu lassen – auch wenn noch viele Fragen offen sind.
 
 ---
 #### REFLEXION
