@@ -12,6 +12,7 @@ public class ProjectService
         {
             throw new InvalidOperationException("Nur Benutzer mit der Rolle 'Projektleiter' dürfen ein Projekt erstellen.");
         }
+        
         Projekt p = new Projekt
         {
             Id = nextProjectId++,

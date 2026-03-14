@@ -43,7 +43,7 @@ ANPASSUNG UND SPEZIFIZERIUNG DES PROJEKTBESCHRIEBS
 - Die Anbindung (Schnittstellen) an die umliegenden Systeme sowie die Benutzer Authentifizierung sind nicht Teil des Projekts.
 - Die "Information" interpretiere ich erstmals als reinen Text um, wie in meinen Zielsetzungen beschrieben, so schnell als möglich vorwärtszukommen.
 - Das Attribut «Kernanforderungen» des Projekts streiche ich ebenfalls, da ich dessen Umsetzung für den Lernmehrwert als vernachlässigbar erachte.
-- Löschen oder ändern der Projekte ist nicht möglich.
+- Projekte zu löschen oder ändern ist nicht möglich.
 ---
 
 ##### ZIELSETZUNG
@@ -174,18 +174,23 @@ In einem zweiten Schritt wurde eine erweiterte Version implementiert [AdvancedVe
 Mit folgenden Anpassungen:
 
 -Das Objekt Information wurde erweitert und ist neu nach Varainte ... aufgebaut
--Die Klassen wurden für eine bessere Übersicht in Module Services unterteilt.
+-Die Klassen wurden für eine bessere Übersicht in Module und Services unterteilt.
 
 [KlassendiagrammAdvancedVarainte](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/klassendiagramm/KDAdvancedVarainte.mmd)
 
 ---
-#### Prototyp
+#### UI-Visualisierung
 
-Ein Prototyp der Applikation findet sich unter folgendem Link:
+Eine UI- Visualiserung der Applikation findet sich unter folgendem Link:
 
 [Protptyp](https://example.com)
 
 #### VORGEHEN
 
+
 ---
 #### REFLEXION
+
+
+
+

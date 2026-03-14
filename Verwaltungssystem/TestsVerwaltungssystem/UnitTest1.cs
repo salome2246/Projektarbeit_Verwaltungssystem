@@ -22,15 +22,12 @@ public class Tests
     public void Setup()
     {
         context = new DatenContext();
-
         projectService = new ProjectService();
         infoService = new InformationService();
 
         projektleiter = new Benutzer(1, "salome", Rolle.Projektleiter);
         mitarbeiter = new Benutzer(2, "bertrand", Rolle.Mitarbeiter);
-
-        context.Benutzer.Add(projektleiter);
-        context.Benutzer.Add(mitarbeiter);
+        
 
         projekt = projectService.erstelleProjekt("ProjektA", "chnd1", projektleiter, context);
 
