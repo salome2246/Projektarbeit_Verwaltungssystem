@@ -1,0 +1,53 @@
+{
+  "Benutzer": [
+    {
+      "Id": 1,
+      "Name": "Salome",
+      "Rolle": 0
+    },
+    {
+      "Id": 2,
+      "Name": "Bertrand",
+      "Rolle": 1
+    }
+  ],
+  "Projekte": [
+    {
+      "Id": 1,
+      "Name": "ProjektA",
+      "Kunde": "KundeA",
+      "Projektleiter": {
+        "Id": 1,
+        "Name": "Salome",
+        "Rolle": 0
+      },
+      "Informationen": [
+        {
+          "Id": 1,
+          "Typ": 0,
+          "Inhalt": "das is die inforamtion",
+          "Tags": [
+            3,
+            0
+          ],
+          "Autor": {
+            "Id": 2,
+            "Name": "Bertrand",
+            "Rolle": 1
+          },
+          "Kommentare": [
+            {
+              "Id": 1,
+              "Text": "das ist der kommentar",
+              "Autor": {
+                "Id": 2,
+                "Name": "Bertrand",
+                "Rolle": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
