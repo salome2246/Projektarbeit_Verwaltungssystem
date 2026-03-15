@@ -1,0 +1,36 @@
+# Rider / JetBrains IDE
+.idea/
+*.DotSettings.user
+
+# Rider caches
+out/
+
+# Build output
+bin/
+obj/
+Debug/
+Release/
+
+# Visual Studio (falls du VS mal benutzt)
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# macOS
+.DS_Store
+
+# NuGet
+*.nupkg
+packages/
+*.snupkg
+.nuget/
+
+# Test results
+TestResults/
+*.trx
+
+# Logs and temporary files
+*.log
+*.tmp
