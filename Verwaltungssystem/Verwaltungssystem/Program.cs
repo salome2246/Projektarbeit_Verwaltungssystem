@@ -9,28 +9,29 @@ class Program
     {
         string ordner = "Datenspeicher";
         
-        // Pfad zur JSON-Datei
         string filePath = Path.Combine(ordner,
             "//Users/salome/Desktop/AL/Projektarbeit_Verwaltungssystem/Verwaltungssystem/Verwaltungssystem/Datenspeicher/daten.json");
         
         DatenContext context = DatenContext.Load(filePath);
         InformationService infoService = new InformationService();
-        //ProjectService projectService = new ProjectService();
+        ProjectService projectService = new ProjectService();
         
 
-       // Benutzer projektleiter = new Benutzer(1, "Salome", Rolle.Projektleiter);
-        //Benutzer mitarbeiter = new Benutzer(2, "Bertrand", Rolle.Mitarbeiter);
+       Benutzer projektleiter = new Benutzer(1, "Salome", Rolle.Projektleiter);
+       Benutzer mitarbeiter = new Benutzer(2, "Bertrand", Rolle.Mitarbeiter);
         
-       // context.Benutzer.Add(projektleiter);
-        //context.Benutzer.Add(mitarbeiter);
+       context.Benutzer.Add(projektleiter);
+       context.Benutzer.Add(mitarbeiter);
         
-        //Projekt projektA = projectService.erstelleProjekt("ProjektA","KundeA",projektleiter,context);
-        //Information infoA = infoService.erstelleInformation(projektA, mitarbeiter, Informationstyp.Text, "das is die inforamtion");
-       // infoService.kommentarHinzufügen(infoA, mitarbeiter,"das ist der kommentar");
-       // infoService.tagHinzufügen(infoA,Tag.Blau);
+       Projekt projektA = projectService.erstelleProjekt("ProjektA","KundeA",projektleiter,context);
+       Information infoA = infoService.erstelleInformation(projektA, mitarbeiter, Informationstyp.Text, "das is die inforamtion");
+       infoService.kommentarHinzufügen(infoA, mitarbeiter,"das ist der kommentar");
+       infoService.tagHinzufügen(infoA,Tag.Blau);
+       
        
 
-        var inhalteMitBlau = context.SucheInformationenNachTag(Tag.Blau);
+        /*
+       var inhalteMitBlau = context.SucheInformationenNachTag(Tag.Blau);
 
         foreach (var info in inhalteMitBlau)
         {
@@ -51,7 +52,7 @@ class Program
         
         // Daten speichern
         context.Save(filePath);
+        */
         
-        
-    }
+    } 
 }
