@@ -104,7 +104,7 @@ Das Aktivitätsdiagramm zeigt die zwei essenziellen Abläufe.
 Die Prozesse passieren in 3 verschieden Verantwortlichkeitsbereichen. Eine Projektanlage wo das Projekt erstellt wird und eine Projektablage,
 wo das Projekt gespeichert wird. Der Benutzer stellt die Schnittstelle dar und kann die im Diagramm dargestellten Funktionen aufrufen.
 
-[Aktivitätsdiagramm](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/tree/main/docs/prototyp#:~:text=04_aktivitaetsdiagramm)
+[Aktivitätsdiagramm](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/cdda6c2c8154a77c09633acf65c861212c230013/docs/analyse/04_aktivitaetsdiagramm.png)
 
 SEQUENZDIAGRAMM  
 Das Sequenzdiagramm zeigt, wie Objekte in einem System über die Zeit miteinander interagieren.  
