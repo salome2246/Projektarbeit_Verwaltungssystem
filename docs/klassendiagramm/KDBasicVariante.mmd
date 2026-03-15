@@ -1,0 +1,44 @@
+classDiagram
+
+class Benutzer {
+    String name
+    Rolle rolle
+    ErstelleProjekt()
+    SchreibeInformation()
+    SchreibeKommentar()
+    SucheNachTag()
+}
+
+class Projekt {
+    String name
+    String kunde
+}
+
+class Information {
+    String inhalt
+    Tag tags
+}
+
+
+class Kommentar {
+    String inhalt
+    Benutzer author
+}
+
+class Tag {
+    <<enumeration>>
+    Gelb
+    Rosa
+    Grün
+    Blau
+}
+
+class Rolle {
+    <<enumeration>>
+    Projektleiter
+    Mitarbeiter
+}
+
+Projekt "0..*" -- "1" Benutzer : kennt
+Projekt "1" *-- "0..*" Information : enthält
+Information "1" *-- "0..*" Kommentar : enthält

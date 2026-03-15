@@ -1,0 +1,13 @@
+# Rider / IDE
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build-Ordner
+bin/
+obj/
+
+# Logs
+*.log
