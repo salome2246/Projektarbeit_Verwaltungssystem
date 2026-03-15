@@ -269,8 +269,8 @@ Abschliessend möchte ich festhalten, dass ich einfach noch zu wenig weiss und i
 Durch den Zeitdruck war ich zudem etwas hin- und hergerissen zwischen Ausprobieren, Lernen und dem möglichst effizienten Erreichen der Projektziele. Rückblickend wäre es auch hilfreich gewesen, früher mit der Arbeit zu beginnen, damit ich mir rechtzeitig Unterstützung hätte holen können.
 
 
-Ausblick:
--Die Suchfunktion müsste nochmals genauer angeschaut werden. Im Datenkontext file ist die Suchfunktion wohl auch nicht am richtigen Ort.
--Andere Grundlegende Funktionen, wie das Löschen oder Ändern von Projekte müsste implementiert werden.
--Grundsätzlich müsste die Struktur nochmals überdacht werden, ob das mit den zwei Services wirklich eine gute Idee war.
+Ausblick:  
+- Die Suchfunktion müsste nochmals genauer angeschaut werden. Im Datenkontext file ist die Suchfunktion wohl auch nicht am richtigen Ort.
+- Andere Grundlegende Funktionen, wie das Löschen oder Ändern von Projekte müsste implementiert werden.
+- Grundsätzlich müsste die Struktur nochmals überdacht werden, ob das mit den zwei Services wirklich eine gute Idee war.
 
