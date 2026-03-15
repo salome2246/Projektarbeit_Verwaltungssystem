@@ -43,7 +43,7 @@ ANPASSUNG UND SPEZIFIZERIUNG DES PROJEKTBESCHRIEBS
 - Die Anbindung (Schnittstellen) an die umliegenden Systeme sowie die Benutzer Authentifizierung sind nicht Teil des Projekts.
 - Die "Information" interpretiere ich erstmals als reinen Text um, wie in meinen Zielsetzungen beschrieben, so schnell als möglich vorwärtszukommen.
 - Das Attribut «Kernanforderungen» des Projekts streiche ich ebenfalls, da ich dessen Umsetzung für den Lernmehrwert als vernachlässigbar erachte.
-- Projekte zu löschen oder ändern ist nicht möglich.
+- Projekte zu löschen oder ändern ist vorerst nicht möglich.
 ---
 
 ##### ZIELSETZUNG
@@ -149,7 +149,7 @@ behandelt haben.
 Zur Struktur der Datenablage habe ich mehrere Möglichkeiten analysiert.  
 Vor- und Nachteile, sowie deren Einfluss auf die Effizienz der geplanten Suchfunktion, sind in folgendem Dokument festgehalten:
 
-[PersistenzVarainten](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/persistenz/persistenzVarainten.pdf)
+[PersistenzVarianten](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/persistenz/persistenzVarainten.pdf)
 
 Auf Basis dieser Analyse entscheide ich mich für Variante 2, 
 da sie für die projektbezogenen Anforderungen (die Suche innerhalb einzelner Projekte und kleine Datenmengen)
@@ -163,7 +163,7 @@ BASICVERSION 101
 
 In einem ersten Schritt wurde eine minimale Version der Anwendung implementiert [BasicVersion 1.0.1](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/tags)
 
-Die Implementierung basiert auf dem folgenden Klassendiagramm, das aus der Analyse in Kapitel zwei hervorgegangen ist.
+Die Implementierung basiert auf dem folgenden Klassendiagramm, das aus der Analyse in Kapitel vier hervorgegangen ist.
 
 [KlassendiagrammBasicVarainte](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/3fe9798e1d578b384495678cdf22231ea0d560b9/Dokumentaion/klassendiagramm/KDBasicVariante.mmd)
 
@@ -184,7 +184,7 @@ Mit folgenden Anpassungen:
 
 Eine UI- Visualiserung der Applikation findet sich unter folgendem Link:
 
-[Protptyp](https://example.com)
+[UIVisualisierung](https://example.com)
 
 ---
 
@@ -243,8 +243,8 @@ Ich gehe in die Recherche und versuche die verschieden Themen zu klären.
 
 02: Basierend auf den Erkenntnissen meiner Recherchen erstelle ich ein zweites Klassendiagramm und strukturiere meinen Code neu. Ebenfalls implementiere ich eine Suchfunktion. Als Ergänzung lasse ich ein kleines Konsolenprogramm generieren über das die Grundlegenden Funktionen gesteuert werden können.
 
-03: Ich möchte das kleine Konsolenprogramm durch manuell erstellte Objekte ersetzen, da ich das für übersichtlicher halte.
-Leider vergesse ich vorher zu committen, springe von einer Änderung zur nächsten und stelle fest, dass Informationen doppelt gespeichert werden. Ich wechsle von einer Anpassung zur anderen und lande schließlich im Chaos.
+03: Ich möchte das kleine Konsolenprogramm durch manuell erstellte Objekte ersetzen, da ich das für ein weiteres Arbeiten, für übersichtlicher halte.
+Leider vergesse ich vorher zu committen, versuche die Logik der Services nochmals anzupassen und stelle fest, dass Informationen doppelt gespeichert werden. Ich wechsle von einer Anpassung zur anderen und lande schliesslich im Chaos.
 Nachdem ich das Gröbste behoben habe, entscheide ich mich, das Projekt vorerst so stehen zu lassen – auch wenn noch viele Fragen offen sind.
 
 ---
@@ -259,15 +259,18 @@ Dokumentation: Das fortlaufende Führen der Dokumentation ist zeitweise etwas au
 
 Präsentation: Da es zeitlich nicht gereicht hat, mich in ein Prototyping-Tool einzuarbeiten, habe ich mich entschieden, mich auf die Visualisierung des UI zu beschränken. Dies hat mir dennoch geholfen, die Anforderungen noch einmal zu überprüfen.
 
-Lernen: Ich konnte auf jeden Fall aus jedem Bereich etwas lernen. Möglicherweise habe ich mich etwas zu sehr auf Dokumentation und Organisation fokussiert, während das Recherchieren etwas zu kurz gekommen ist.
+Lernen: Ich konnte in jedem Bereich etwas dazulernen. Im Bereich der Dokumentation konnte ich meine persönliche Best Practice weiterentwickeln und GitHub Projects besser kennenlernen.  
+Während der Analyse und Umsetzung fand ich vor allem die Fragen rund um Design und Architektur spannend: Welche Beziehungen sind sinnvoll? Was gehört logisch zusammen? Gerade auch im Bezug auf wie die Daten persistiert werden.
+In diese Themen wäre ich gerne noch tiefer eingetaucht.
+Leider kam das Recherchieren aufgrund des Aufwands für die Dokumentation und einiger technischer Schwierigkeiten etwas zu kurz.
 
-Abschliessend kann ich sagen, dass ich den Aufwand auf jeden Fall unterschätzt habe.
-Da ich in der Softwareentwicklung noch wenig Erfahrung habe, habe ich auch viel Zeit mit eher banalen Aufgaben verloren.
-Aufgrund des Zeitdrucks war ich zudem etwas hin- und hergerissen zwischen Ausprobieren, Lernen und dem möglichst effizienten Erreichen der Projektziele. Ebenfalls wäre es hilfreich gewesen, etwas früher zu beginnen, um mir rechtzeitig Hilfe holen zu können.
+Abschliessend möchte ich festhalten, dass ich einfach noch zu wenig weiss und ich deshalb über viele grundlegende Dinge gestolpert bin. (Probleme mit Git, zu spät verstanden, dass ich bei Unittests der Datenspeicher natürlich nicht mittesten muss etc) Dies hat mich teilweise viel Zeit gekostet.
+
+Durch den Zeitdruck war ich zudem etwas hin- und hergerissen zwischen Ausprobieren, Lernen und dem möglichst effizienten Erreichen der Projektziele. Rückblickend wäre es auch hilfreich gewesen, früher mit der Arbeit zu beginnen, damit ich mir rechtzeitig Unterstützung hätte holen können.
+
 
 Ausblick:
--Sicher Basic Sache  (ämderä löschä ladä)
--Suchefunktion nomal ahluge
--architektur
-
+-Die Suchfunktion müsste nochmals genauer angeschaut werden. Im Datenkontext file ist die Suchfunktion wohl auch nicht am richtigen Ort.
+-Andere Grundlegende Funktionen, wie das Löschen oder Ändern von Projekte müsste implementiert werden.
+-Grundsätzlich müsste die Struktur nochmals überdacht werden, ob das mit den zwei Services wirklich eine gute Idee war.
 
