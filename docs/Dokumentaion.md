@@ -138,7 +138,7 @@ Aus dem angepassten Projektbeschrieb, dem Usecase Diagramm und dem Dokument [Anf
 ---
 
 #### TESTS
-Basierend auf den fünf Grundanforderungen entsteht die [Testplanung](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/cdda6c2c8154a77c09633acf65c861212c230013/docs/test/Testplanung.pdf).
+Basierend auf den fünf Grundanforderungen entsteht die [Testplanung](https://github.com/salome2246/Projektarbeit_Verwaltungssystem/blob/7f70791e5f205cc8d7876bfae79f99d1c087e83c/docs/test/Testplanung.pdf).
 Um die Applikation auf die grundlegenden Funktionen zu überprüfen, werden die sechs Testfälle in NUnit Tests übersetzt.
 
 ---
