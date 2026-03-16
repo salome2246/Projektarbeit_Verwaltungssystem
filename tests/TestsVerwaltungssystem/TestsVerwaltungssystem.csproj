@@ -22,7 +22,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\src\Verwaltungssystem\Verwaltungssystem.csproj" />
-      <ProjectReference Include="..\Verwaltungssystem\Verwaltungssystem.csproj" />
     </ItemGroup>
 
 </Project>

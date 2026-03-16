@@ -90,6 +90,7 @@ public class Tests
         Assert.That(kommentar, Is.Not.Null);
         Assert.That(info.Kommentare, Has.Member(kommentar));
         Assert.That(kommentar.Autor, Is.EqualTo(mitarbeiter));
+        Assert.That(kommentar.Text, Is.EqualTo("Das ist der Kommentar"));
     }
     
     [Test]
